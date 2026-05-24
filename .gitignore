@@ -5,10 +5,11 @@ node_modules/
 dist/
 dist-ssr/
 
-# Local environment
+# Environment & secrets (never commit)
 .env
 .env.*
 !.env.example
+*.local
 
 # Logs
 *.log
@@ -16,7 +17,7 @@ npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
 
-# Editor and OS files
+# Editor and OS
 .DS_Store
 .idea/
 .vscode/
@@ -29,3 +30,22 @@ pnpm-debug.log*
 # Tool caches
 .vite/
 *.tsbuildinfo
+.whisper-cache/
+*.whisper-cache
+
+# Large binaries / media (explicitly excluded)
+*.mp3
+*.wav
+*.ogg
+*.bin
+*.exe
+*.dll
+*.so
+*.dylib
+
+# System / user folders (never)
+bin/
+models/
+tools/
+electron/
+dist-electron/
